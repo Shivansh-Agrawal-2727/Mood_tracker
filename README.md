@@ -9,7 +9,7 @@
 ---
 
 ## 🖥️ UI Overview
-   ![Screenshot 2025-03-20 195359](https://github.com/user-attachments/assets/8d07ab56-a614-47d9-add1-47f654bee712)
+   ![image](https://github.com/user-attachments/assets/dfb7eaae-8433-4b08-8c9b-794db42cf304)
 
 ## 🚀 Key Features
 

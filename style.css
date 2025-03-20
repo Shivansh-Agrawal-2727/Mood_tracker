@@ -18,7 +18,7 @@ body {
     margin-left: 150px;
 }
 
-.container{ 
+.container {
     display: flex;
     gap: 30px;
 }
@@ -92,7 +92,7 @@ body {
 
 .calender {
     width: 510px;
-    height: 520px;
+    height: 510px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -102,26 +102,28 @@ body {
             rgba(238, 174, 202, 1) 0%,
             rgba(148, 187, 233, 1) 100%);
     border-radius: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 100px;
 }
 
-.header-calender{
+.header-calender {
     display: flex;
-    align-items:baseline;
+    align-items: baseline;
     justify-content: space-around;
     padding-left: 15px;
     width: 100%;
-    .icons span{
+
+    .icons span {
         cursor: pointer;
     }
 }
+
 h1 {
     font-weight: 800;
     margin: 1rem 0 0;
 }
 
-.weeks{
+.weeks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     list-style: none;
@@ -133,12 +135,13 @@ h1 {
     font-weight: bold;
     font-size: 18px;
 }
+
 .days {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     flex-wrap: wrap;
     list-style: none;
-    padding:0px;
+    padding: 0px;
     margin-top: 0px;
 
     li {
@@ -161,25 +164,119 @@ h1 {
         cursor: pointer;
     }
 
-    li.active{
+    li.active {
         background: #641d80;
         color: white;
     }
-    li.active:hover{
+
+    li.active:hover {
         background-color: #853da1;
     }
-    .inactive{
+
+    .inactive {
         color: #aaa;
         background: #d8c4d9;
     }
-    .curr:hover{
+
+    .curr:hover {
         background: #e7cfe8;
     }
 }
 
-.emoji{
+.emoji {
     margin: 0px;
     margin-left: 18px;
     margin-top: -10px;
     padding: 0px;
 }
+
+.para{
+    margin-top: -5px;
+    margin-bottom: 10px;
+    /* padding-top: 0px; */
+}
+
+/* For tablets and mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .grid {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .calender {
+        order: 2; /* Move calendar below flip cards */
+        width: 90%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .weeks,
+    .days {
+        grid-template-columns: repeat(7, 1fr); /* Keep 7 columns */
+        gap: 8px;
+        width: 100%;
+    }
+
+    .days li {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 0.3rem;
+        border-radius: 8px;
+    }
+
+    .emoji {
+        margin-left: 4px;
+        margin-top: -4px;
+    }
+}
+
+/* For small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .weeks,
+    .days {
+        grid-template-columns: repeat(7, 1fr); /* Keep 7 columns */
+        gap: 5px;
+    }
+
+    .days li {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.9rem;
+        padding: 0.2rem;
+    }
+
+    .emoji {
+        margin-left: 2px;
+        margin-top: -4px;
+    }
+}
+
+/* For very small devices (up to 360px) */
+@media (max-width: 360px) {
+    .weeks,
+    .days {
+        grid-template-columns: repeat(7, 1fr); /* Still 7 columns */
+        gap: 4px;
+    }
+
+    .days li {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 0.8rem;
+    }
+
+    .emoji {
+        margin-left: 2px;
+        margin-top: -3px;
+    }
+}
+

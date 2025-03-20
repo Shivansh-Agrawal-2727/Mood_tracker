@@ -92,7 +92,7 @@ body {
 
 .calender {
     width: 510px;
-    height: 460px;
+    height: 520px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -109,8 +109,12 @@ body {
 .header-calender{
     display: flex;
     align-items:baseline;
-    gap: 200px;
+    justify-content: space-around;
     padding-left: 15px;
+    width: 100%;
+    .icons span{
+        cursor: pointer;
+    }
 }
 h1 {
     font-weight: 800;
@@ -164,8 +168,18 @@ h1 {
     li.active:hover{
         background-color: #853da1;
     }
-
-    li:hover{
-        background: #ebd6ec;
+    .inactive{
+        color: #aaa;
+        background: #d8c4d9;
     }
+    .curr:hover{
+        background: #e7cfe8;
+    }
+}
+
+.emoji{
+    margin: 0px;
+    margin-left: 18px;
+    margin-top: -10px;
+    padding: 0px;
 }

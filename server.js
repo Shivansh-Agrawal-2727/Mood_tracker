@@ -69,7 +69,7 @@ flipcard.forEach((card) => {
                 p.innerText = "😄";
             }
             else if (card.id === "sad") {
-                p.innerText = "😌";
+                p.innerText = "😔";
             }
             else if (card.id === "neutral") {
                 p.innerText = "😑";
